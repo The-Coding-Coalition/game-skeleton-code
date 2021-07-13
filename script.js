@@ -148,7 +148,7 @@ function collisionDetection() {
     }
 }
 
-function hitDetection() {
+function hitDetection() { // Checks to see if player has hit an enemy
     for (let i = 0; i < enemies.length; i++) {
         if (Math.sqrt(((enemies[i].x - (player.x + (player.length / 2))) ** 2) + ((enemies[i].y - (player.y + (player.length / 2))) ** 2)) <= enemies[i].radius + (player.length / 2)) {
             ctx.fillText("HIT", player.x, player.y - player.length); // Replace this with whatever you want to happen to the player after getting hit
